@@ -123,7 +123,9 @@ type DefStmt struct {
 	commentsRef
 	Def    Position
 	Name   *Ident
+	Lparen Token
 	Params []Expr // param = ident | ident=expr | * | *ident | **ident
+	Rparen Token
 	Body   []Stmt
 
 	Function interface{} // a *resolve.Function, set by resolver
